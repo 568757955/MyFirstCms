@@ -1,0 +1,113 @@
+﻿@model EcgItemViewModel
+
+@{
+    ViewData["Title"] = "index";
+}
+
+<h1>index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EcgItems.First().EcgItemId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EcgItems.First().ItemNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EcgItems.First().ItemName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EcgItems.First().Pym)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EcgItems.First().ItemUnit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EcgItems.First().UnitPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EcgItems.First().Wbm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EcgItems.First().InputCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EcgItems.First().SysClass)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EcgItems.First().ExecDept)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EcgItems.First().Group)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EcgItems.First().OperTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EcgItems.First().Enabled)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EcgItems.First().CommomUse)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.EcgItems) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EcgItemId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pym)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemUnit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnitPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Wbm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InputCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SysClass)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExecDept)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Group)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OperTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Enabled)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CommomUse)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
